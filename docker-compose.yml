@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tgbuild:
+    build:
+      context: .
+    platform: "linux/amd64"  
+    image: tgbuild:latest
+    volumes:
+      - ./work:/home/user/work
+      - ./tgwireguard:/home/user/tgwireguard
+      - ./openwrt:/home/user/openwrt
